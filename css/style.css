@@ -198,10 +198,10 @@ footer div { display: flex; gap: 25px; }
 .start-over { display: block; margin: 20px auto 0; border: 0; border-bottom: 1px solid var(--ink); background: none; font: inherit; font-size: 12px; cursor: pointer; }
 
 @media (max-width: 900px) {
-  body { padding-bottom: 64px; }
-  .desktop-nav { position: fixed; z-index: 110; left: 10px; right: 10px; bottom: 8px; display: grid; grid-template-columns: repeat(4,1fr); gap: 0; padding: 7px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,253,247,.96); box-shadow: 0 10px 35px rgba(24,44,29,.18); backdrop-filter: blur(14px); }
+  body { padding-bottom: 0; }
+  .desktop-nav { position: static; order: 3; flex-basis: 100%; display: grid; grid-template-columns: repeat(4,1fr); gap: 0; padding: 5px 0 8px; border-top: 1px solid var(--line); background: transparent; box-shadow: none; backdrop-filter: none; }
   .desktop-nav a { padding: 8px 4px; text-align: center; font-size: 10px; }
-  .site-header { padding: 0 22px; }
+  .site-header { min-height: 122px; height: auto; padding: 12px 22px 0; flex-wrap: wrap; background: var(--cream); backdrop-filter: none; }
   main { padding: 0 12px 18px; }
   .hero { grid-template-columns: 1fr; }
   .hero-copy { padding: 58px 34px 42px; min-height: 610px; }
@@ -233,7 +233,7 @@ footer div { display: flex; gap: 25px; }
 }
 
 @media (max-width: 560px) {
-  .site-header { height: 78px; }
+  .site-header { min-height: 116px; height: auto; }
   .brand { font-size: 13px; }
   .brand-mark { width: 39px; height: 39px; }
   .header-action { padding: 10px 13px; font-size: 11px; }
