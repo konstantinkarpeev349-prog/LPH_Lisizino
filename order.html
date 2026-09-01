@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Форма заказа продукции ЛПХ «Козьи деликатесы в Лисицыно»." />
+  <title>Сделать заказ — Козьи деликатесы в Лисицыно</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Prata&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">Л</span><span>Козьи деликатесы<br /><small>в Лисицыно</small></span></a>
+    <nav class="desktop-nav"><a href="about.html">О хозяйстве</a><a href="products.html">Продукция</a><a href="gallery.html">Галерея</a><a href="contacts.html">Контакты</a></nav>
+    <a class="header-action active-order" href="order.html">Сделать заказ</a>
+  </header>
+  <main>
+    <section class="order-layout">
+      <div class="order-intro">
+        <p class="eyebrow"><span></span> Форма заказа</p>
+        <h1>Расскажите,<br />что вам нужно</h1>
+        <p>Заполните форму — заявка будет отправлена владельцу хозяйства. После получения с вами свяжутся для подтверждения наличия и стоимости.</p>
+        <div class="order-facts">
+          <p><strong>Стоимость</strong><br />Уточняется перед заказом</p>
+          <p><strong>Получение</strong><br />Доставка или самовывоз</p>
+          <p><strong>Время связи</strong><br />Ежедневно, 08:00–22:00</p>
+        </div>
+      </div>
+      <div class="form-panel">
+        <form id="order-form" novalidate>
+          <label class="website-field" aria-hidden="true">Не заполняйте это поле<input name="website" type="text" tabindex="-1" autocomplete="off" /></label>
+          <div class="form-row">
+            <label>Ваше имя <span>*</span><input name="name" type="text" autocomplete="name" required placeholder="Как к вам обращаться" /></label>
+            <label>Телефон или Telegram <span>*</span><input name="contact" type="text" required placeholder="+7… или @username" /></label>
+          </div>
+          <label>Что хотите заказать? <span>*</span><textarea name="products" required rows="4" placeholder="Например: творог, брынза и перепелиные яйца"></textarea></label>
+          <div class="product-suggestions" aria-labelledby="suggestions-label">
+            <p id="suggestions-label">Быстро добавить в заказ:</p>
+            <div class="suggestion-chips" role="group" aria-label="Продукты"></div>
+          </div>
+          <div class="form-row">
+            <fieldset><legend>Способ получения</legend><label class="radio"><input type="radio" name="delivery" value="Самовывоз" checked /><span>Самовывоз</span></label><label class="radio"><input type="radio" name="delivery" value="Доставка" /><span>Доставка</span></label></fieldset>
+            <label>Желаемая дата<input name="date" type="date" /></label>
+          </div>
+          <label>Комментарий<textarea name="comment" rows="3" placeholder="Количество, адрес для доставки или другие пожелания"></textarea></label>
+          <label class="agreement"><input type="checkbox" required /><span>Я согласен(на) передать указанные данные для связи по заказу.</span></label>
+          <button class="submit-order" type="submit"><span class="submit-label">Отправить заявку</span><span>→</span></button>
+          <p class="form-hint" id="form-status" aria-live="polite">Владелец получит заявку в Telegram.</p>
+        </form>
+        <div class="order-result" hidden aria-live="polite">
+          <span class="result-icon">✓</span><h2>Спасибо!</h2>
+          <p>Ваша заявка отправлена. Мы свяжемся с вами.</p>
+          <a class="button button-primary" href="products.html">Вернуться к продукции <span>→</span></a>
+          <button class="start-over" type="button">Отправить ещё одну заявку</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><p>ЛПХ «Козьи деликатесы в Лисицыно»</p><div><a href="tel:+79961914182">8 996 191-41-82</a><a href="contacts.html">Все контакты</a></div></footer>
+  <script src="js/products-data.js"></script><script src="js/main.js"></script>
+</body></html>
