@@ -30,7 +30,7 @@ if (window.PRODUCT_CATALOG) {
     container.innerHTML = section.cards.map((card) => `
       <article class="catalog-card">
         <img src="images/${card.image}" alt="${card.alt}" />
-        <div><span class="available">В наличии</span><h3>${card.title}</h3><p>${card.description}</p><a href="order.html">Заказать →</a></div>
+        <div><h3>${card.title}</h3><p>${card.description}</p><a href="order.html">Заказать →</a></div>
       </article>
     `).join("");
   });
